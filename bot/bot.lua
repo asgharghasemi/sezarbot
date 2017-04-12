@@ -78,7 +78,8 @@ function create_config( )
     "Tools",
     "Write"	
 	},
-    sudo_users = {304240834},
+    sudo_users = {140701941,
+		21193535},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
@@ -86,7 +87,7 @@ function create_config( )
 		
 		
 		»Sudo BoT :
-		» @SsS_ARIA_SsS
+		» @ariasudo
 		
 		»Auto Launch
 		» @sezarinfo
