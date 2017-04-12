@@ -9,8 +9,8 @@
 ```sh
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/sezarvip/tgbot.git
-cd tgbot
+git clone https://github.com/asgharghasemi/sezarbot
+cd sezarbot
 chmod +x sezar.sh
 ./sezar.sh install
 ./sezar.sh 
@@ -19,7 +19,7 @@ chmod +x sezar.sh
 ### One command
 To install everything in one command, use:
 ```sh
-cd $HOME && git clone https://github.com/sezarvip/tgbot.git && cd tgbot && chmod +x sezar.sh && ./sezar.sh install && ./sezar.sh
+cd $HOME && git clone https://github.com/asgharghasemi/sezarbot.git && cd sezarbot && chmod +x sezar.sh && ./sezar.sh install && ./sezar.sh
 ```
 
 * * *
@@ -28,7 +28,7 @@ cd $HOME && git clone https://github.com/sezarvip/tgbot.git && cd tgbot && chmod
 
 ```
 killall -9 bash
-cd sezar && killall screen && screen ./sezar.sh
+cd ezarbot && killall screen && screen ./sezar.sh
 ```
 
 * * *
