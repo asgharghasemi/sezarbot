@@ -15,7 +15,7 @@ end
 if not lang then
    return '_Group is already added_'
 else
-return 'گروه در لیست گروه های مدیریتی سـزار هم اکنون موجود است'
+return 'گروه در لیست گروه های مدیریتی ربات هم اکنون موجود است'
   end
 end
         -- create data array in moderation.json
@@ -73,7 +73,7 @@ end
     if not lang then
   return '*Group has been added*'
 else
-  return 'گروه با موفقیت به لیست گروه های مدیریتی سـزار افزوده شد'
+  return 'گروه با موفقیت به لیست گروه های مدیریتی ربات افزوده شد'
 end
 end
 
@@ -94,7 +94,7 @@ local lang = redis:get(hash)
   if not lang then
     return '_Group is not added_'
 else
-    return 'گروه به لیست گروه های مدیریتی سـزار اضافه نشده است'
+    return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
    end
   end
 
@@ -109,7 +109,7 @@ else
  if not lang then
   return '*Group has been removed*'
  else
-  return 'گروه با موفیت از لیست گروه های مدیریتی سـزار حذف شد'
+  return 'گروه با موفیت از لیست گروه های مدیریتی ربات حذف شد'
 end
 end
 
@@ -171,7 +171,7 @@ local lang = redis:get(hash)
   if not lang then
     return "_Group is not added_"
  else
-    return "گروه به لیست گروه های مدیریتی سـزار اضافه نشده است"
+    return "گروه به لیست گروه های مدیریتی ربات اضافه نشده است"
   end
  end
   -- determine if table is empty
@@ -204,7 +204,7 @@ local lang = redis:get(hash)
 if not lang then
     return "_Group is not added_"
 else
-return "گروه به لیست گروه های مدیریتی سـزار اضافه نشده است"
+return "گروه به لیست گروه های مدیریتی ربات اضافه نشده است"
   end
 end
   -- determine if table is empty
@@ -238,7 +238,7 @@ if not tonumber(data.sender_user_id_) then return false end
   if not lang then
     return tdcli.sendMessage(data.chat_id_, "", 0, "_Group is not added_", 0, "md")
 else
-    return tdcli.sendMessage(data.chat_id_, "", 0, "_گروه به لیست گروه های مدیریتی سـزار اضافه نشده است_", 0, "md")
+    return tdcli.sendMessage(data.chat_id_, "", 0, "_گروه به لیست گروه های مدیریتی ربات اضافه نشده است_", 0, "md")
      end
   end
 if cmd == "setowner" then
@@ -386,7 +386,7 @@ local cmd = arg.cmd
   if not lang then
     return tdcli.sendMessage(data.chat_id_, "", 0, "_Group is not added_", 0, "md")
 else
-    return tdcli.sendMessage(data.chat_id_, "", 0, "_گروه به لیست گروه های مدیریتی سـزار اضافه نشده است_", 0, "md")
+    return tdcli.sendMessage(data.chat_id_, "", 0, "_گروه به لیست گروه های مدیریتی ربات اضافه نشده است_", 0, "md")
      end
   end
 if not arg.username then return false end
@@ -493,7 +493,7 @@ local cmd = arg.cmd
   if not lang then
     return tdcli.sendMessage(data.chat_id_, "", 0, "_Group is not added_", 0, "md")
 else
-    return tdcli.sendMessage(data.chat_id_, "", 0, "_گروه به لیست گروه های مدیریتی سـزار اضافه نشده است_", 0, "md")
+    return tdcli.sendMessage(data.chat_id_, "", 0, "_گروه به لیست گروه های مدیریتی ربات اضافه نشده است_", 0, "md")
      end
   end
 if not tonumber(arg.user_id) then return false end
@@ -2688,7 +2688,7 @@ end
 end
 if not lang then
 local settings = data[tostring(target)]["settings"] 
- text ="*⚙gяσυρ ѕєттιηgѕ:*\n⭕*ℓσcк є∂ιт :* "..settings.lock_edit.."\n💢*ℓσcк ℓιηкѕ :* "..settings.lock_link.."\n⭕*ℓσcк тαgѕ :* "..settings.lock_tag.."\n💢*ℓσcк ƒℓσσ∂ :* "..settings.flood.."\n⭕*ℓσcк ѕραм :* "..settings.lock_spam.."\n💢*ℓσcк мєηтιση :* "..settings.lock_mention.."\n⭕*ℓσcк αяαвιc :* "..settings.lock_arabic.."\n💢*ℓσcк ωєвραgє :* "..settings.lock_webpage.."\n⭕*ℓσcк мαяк∂σωη :* "..settings.lock_markdown.."\n💢*ℓσcк єηgℓιѕн :* "..settings.english.."\n⭕*ℓσcк ƒσѕн :* "..settings.fosh.."\n💢*ℓσcк α∂ѕ :* "..settings.ads.."\n⭕*ℓσcк νιєωѕ :* "..settings.views.."\n💢*ℓσcк ємσנι :* "..settings.emoji.."\n⭕*gяσυρ ωєℓcσмє :* "..settings.welcome.."\n💢*ℓσcк ριη мєѕѕαgє :* "..settings.lock_pin.."\n⭕*вσтѕ ρяσтєcтιση :* "..settings.lock_bots.."\n*💢ƒℓσσ∂ ѕєηѕιтινιту:* *"..NUM_MSG_MAX.."*\n*____________________*\n*⚙gяσυρ мυтє ℓιѕт* :\n⭕*мυтє αℓℓ : * "..settings.mute_all.."\n💢*мυтє gιƒ :* "..settings.mute_gif.."\n⭕*мυтє тєχт :* "..settings.mute_text.."\n💢*мυтє ιηℓιηє :* "..settings.mute_inline.."\n⭕*мυтє gαмє :* "..settings.mute_game.."\n💢*мυтє ρнσтσ :* "..settings.mute_photo.."\n⭕*мυтє νι∂єσ :* "..settings.mute_video.."\n💢*мυтє αυ∂ισ :* "..settings.mute_audio.."\n⭕*мυтє νσιcє :* "..settings.mute_voice.."\n💢*мυтє ѕтιcкєя :* "..settings.mute_sticker.."\n⭕*мυтє cσηтαcт :* "..settings.mute_contact.."\n💢*мυтє ƒσяωαя∂ :* "..settings.mute_forward.."\n⭕*мυтє ℓσcαтιση :* "..settings.mute_location.."\n💢*мυтє ∂σcυмєηт :* "..settings.mute_document.."\n⭕*мυтє тgѕєяνιcє :* "..settings.mute_tgservice.."\n💢*мυтє кєувσαя∂ :* "..settings.mute_keyboard.."\n*____________________*\n*🌐gяσυρ ℓαηgυαgє* : єη\n🗓*єχριя:* _"..expire_date.."_\n*✒ѕυ∂σ вσт:* @SsS_ARIA_SsS"
+ text ="*⚙gяσυρ ѕєттιηgѕ:*\n⭕*ℓσcк є∂ιт :* "..settings.lock_edit.."\n💢*ℓσcк ℓιηкѕ :* "..settings.lock_link.."\n⭕*ℓσcк тαgѕ :* "..settings.lock_tag.."\n💢*ℓσcк ƒℓσσ∂ :* "..settings.flood.."\n⭕*ℓσcк ѕραм :* "..settings.lock_spam.."\n💢*ℓσcк мєηтιση :* "..settings.lock_mention.."\n⭕*ℓσcк αяαвιc :* "..settings.lock_arabic.."\n💢*ℓσcк ωєвραgє :* "..settings.lock_webpage.."\n⭕*ℓσcк мαяк∂σωη :* "..settings.lock_markdown.."\n💢*ℓσcк єηgℓιѕн :* "..settings.english.."\n⭕*ℓσcк ƒσѕн :* "..settings.fosh.."\n💢*ℓσcк α∂ѕ :* "..settings.ads.."\n⭕*ℓσcк νιєωѕ :* "..settings.views.."\n💢*ℓσcк ємσנι :* "..settings.emoji.."\n⭕*gяσυρ ωєℓcσмє :* "..settings.welcome.."\n💢*ℓσcк ριη мєѕѕαgє :* "..settings.lock_pin.."\n⭕*вσтѕ ρяσтєcтιση :* "..settings.lock_bots.."\n*💢ƒℓσσ∂ ѕєηѕιтινιту:* *"..NUM_MSG_MAX.."*\n*____________________*\n*⚙gяσυρ мυтє ℓιѕт* :\n⭕*мυтє αℓℓ : * "..settings.mute_all.."\n💢*мυтє gιƒ :* "..settings.mute_gif.."\n⭕*мυтє тєχт :* "..settings.mute_text.."\n💢*мυтє ιηℓιηє :* "..settings.mute_inline.."\n⭕*мυтє gαмє :* "..settings.mute_game.."\n💢*мυтє ρнσтσ :* "..settings.mute_photo.."\n⭕*мυтє νι∂єσ :* "..settings.mute_video.."\n💢*мυтє αυ∂ισ :* "..settings.mute_audio.."\n⭕*мυтє νσιcє :* "..settings.mute_voice.."\n💢*мυтє ѕтιcкєя :* "..settings.mute_sticker.."\n⭕*мυтє cσηтαcт :* "..settings.mute_contact.."\n💢*мυтє ƒσяωαя∂ :* "..settings.mute_forward.."\n⭕*мυтє ℓσcαтιση :* "..settings.mute_location.."\n💢*мυтє ∂σcυмєηт :* "..settings.mute_document.."\n⭕*мυтє тgѕєяνιcє :* "..settings.mute_tgservice.."\n💢*мυтє кєувσαя∂ :* "..settings.mute_keyboard.."\n*____________________*\n*🌐gяσυρ ℓαηgυαgє* : єη\n🗓*єχριя:* _"..expire_date.."_\n*✒ѕ"
 else
 local exp = redis:get("charged:"..msg.chat_id_)
     local day = 86400
@@ -2700,7 +2700,7 @@ local exp = redis:get("charged:"..msg.chat_id_)
        expirefa = " *"..d.."* _روز_"
    end
 local settings = data[tostring(target)]["settings"] 
- text = "*تنظیمات گروه:*\n*⭕قفل ویرایش پیام :* "..settings.lock_edit.."\n*💢قفل لینک :* "..settings.lock_link.."\n*⭕قفل تگ :* "..settings.lock_tag.."\n*💢قفل پیام مکرر :* "..settings.flood.."\n*⭕قفل هرزنامه :* "..settings.lock_spam.."\n*💢قفل فراخوانی :* "..settings.lock_mention.."\n*⭕قفل عربی :* "..settings.lock_arabic.."\n*💢قفل صفحات وب :* "..settings.lock_webpage.."\n*⭕قفل فونت :* "..settings.lock_markdown.."\n*💢قفل انگلیسی :* "..settings.english.."\n*⭕قفل فحش: * "..settings.fosh.."\n*💢قفل تبلیفات:* "..settings.ads.."\n*⭕قفل پست ویودار:* "..settings.views.."\n*💢قفل اموجی:* "..settings.emoji.."\n*⭕پیام خوشآمد گویی :* "..settings.welcome.."\n*💢قفل سنجاق کردن :* "..settings.lock_pin.."\n*⭕محافظت در برابر ربات ها :* "..settings.lock_bots.."\n*💢حداکثر پیام مکرر :* *"..NUM_MSG_MAX.."*\n*____________________*\n*لیست بیصدا ها* : \n*⭕بیصدا همه : * "..settings.mute_all.."\n*💢بیصدا تصاویر متحرک :* "..settings.mute_gif.."\n*⭕بیصدا متن :* "..settings.mute_text.."\n*💢بیصدا کیبورد شیشه ای :* "..settings.mute_inline.."\n*⭕بیصدا بازی های تحت وب :* "..settings.mute_game.."\n*💢بیصدا عکس :* "..settings.mute_photo.."\n*⭕بیصدا فیلم :* "..settings.mute_video.."\n*💢بیصدا آهنگ :* "..settings.mute_audio.."\n*⭕بیصدا صدا :* "..settings.mute_voice.."\n*💢بیصدا برچسب :* "..settings.mute_sticker.."\n*⭕بیصدا مخاطب :* "..settings.mute_contact.."\n*💢بیصدا نقل قول :* "..settings.mute_forward.."\n*⭕بیصدا موقعیت :* "..settings.mute_location.."\n*💢بیصدا اسناد :* "..settings.mute_document.."\n*⭕بیصدا خدمات تلگرام :* "..settings.mute_tgservice.."\n*💢بیصدا صفحه کلید :* "..settings.mute_keyboard.."\n*____________________*\n🌐_زبان سوپرگروه_ : *FA*\n🗓*تاریخ انقضا گروه: * _"..expire_date.."_\n✒*برنامه نویس:* @SsS_ARIA_SsS"
+ text = "*تنظیمات گروه:*\n*⭕قفل ویرایش پیام :* "..settings.lock_edit.."\n*💢قفل لینک :* "..settings.lock_link.."\n*⭕قفل تگ :* "..settings.lock_tag.."\n*💢قفل پیام مکرر :* "..settings.flood.."\n*⭕قفل هرزنامه :* "..settings.lock_spam.."\n*💢قفل فراخوانی :* "..settings.lock_mention.."\n*⭕قفل عربی :* "..settings.lock_arabic.."\n*💢قفل صفحات وب :* "..settings.lock_webpage.."\n*⭕قفل فونت :* "..settings.lock_markdown.."\n*💢قفل انگلیسی :* "..settings.english.."\n*⭕قفل فحش: * "..settings.fosh.."\n*💢قفل تبلیفات:* "..settings.ads.."\n*⭕قفل پست ویودار:* "..settings.views.."\n*💢قفل اموجی:* "..settings.emoji.."\n*⭕پیام خوشآمد گویی :* "..settings.welcome.."\n*💢قفل سنجاق کردن :* "..settings.lock_pin.."\n*⭕محافظت در برابر ربات ها :* "..settings.lock_bots.."\n*💢حداکثر پیام مکرر :* *"..NUM_MSG_MAX.."*\n*____________________*\n*لیست بیصدا ها* : \n*⭕بیصدا همه : * "..settings.mute_all.."\n*💢بیصدا تصاویر متحرک :* "..settings.mute_gif.."\n*⭕بیصدا متن :* "..settings.mute_text.."\n*💢بیصدا کیبورد شیشه ای :* "..settings.mute_inline.."\n*⭕بیصدا بازی های تحت وب :* "..settings.mute_game.."\n*💢بیصدا عکس :* "..settings.mute_photo.."\n*⭕بیصدا فیلم :* "..settings.mute_video.."\n*💢بیصدا آهنگ :* "..settings.mute_audio.."\n*⭕بیصدا صدا :* "..settings.mute_voice.."\n*💢بیصدا برچسب :* "..settings.mute_sticker.."\n*⭕بیصدا مخاطب :* "..settings.mute_contact.."\n*💢بیصدا نقل قول :* "..settings.mute_forward.."\n*⭕بیصدا موقعیت :* "..settings.mute_location.."\n*💢بیصدا اسناد :* "..settings.mute_document.."\n*⭕بیصدا خدمات تلگرام :* "..settings.mute_tgservice.."\n*💢بیصدا صفحه کلید :* "..settings.mute_keyboard.."\n*____________________*\n🌐_زبان سوپرگروه_ : *FA*\n🗓*تاریخ انقضا گروه: * _"..expire_date.."_\n✒*برنامه نویس:* "
 end
 if not lang then
 text = string.gsub(text, "yes", "#ყεร")
@@ -3228,7 +3228,7 @@ if matches[1] == 'linkpv' and is_mod(msg) or matches[1] == 'Linkpv' and is_mod(m
    if not lang then
      rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban."
     elseif lang then
-       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود."
+       rules = "ℹ️ قوانین :\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود."
  end
         else
      rules = "*Group Rules :*\n"..data[tostring(chat)]['rules']
@@ -3429,7 +3429,7 @@ end
 if matches[1] == "help" and is_mod(msg) or matches[1] == "Help" and is_mod(msg) then
 if not lang then
 text = [[
-📜Help of Sezar
+📜Help of bot
 
 〰〰〰〰〰〰〰〰〰〰〰
 ☆》#دستورات تنظیم مدیر و معاون 
@@ -3567,13 +3567,13 @@ text = [[
 🔶شما دوستان عزیز میتوانید از قرار دادن [!/#] در اول دستور استفاده نماید
 🔷دستورات به زبان انگلیسی هست و جواب دستورات به دو شکل فارسی و انگلیسی قابل تغییر است❕
 〰〰〰〰〰〰〰〰〰〰〰
-➰Powered by :@Sezarinfo
+➰Powered by :@tablighati
 〰〰〰〰〰〰〰〰〰〰〰]]
 
 elseif lang then
 
 text = [[
-📜Help of sezar
+📜Help of bot
 〰〰〰〰〰〰〰〰〰〰〰
 ☆》#دستورات تنظیم مدیر و معاون 
 
@@ -3711,7 +3711,7 @@ text = [[
 🔶شما دوستان عزیز میتوانید از قرار دادن [!/#] در اول دستور استفاده نماید
 🔷دستورات به زبان انگلیسی هست و جواب دستورات به دو شکل فارسی و انگلیسی قابل تغییر است❕
 〰〰〰〰〰〰〰〰〰〰〰
-➰Powered by :@Sezarinfo
+➰Powered by :@tablighati
 〰〰〰〰〰〰〰〰〰〰〰]]
 end
 return text
@@ -3719,7 +3719,7 @@ end
 if matches[1] == "راهنما" and is_mod(msg) then
 text = [[
 
-📜راهنمای ربات سـزار
+📜راهنمای ربات 
 
 〰〰〰〰〰〰〰〰〰〰〰
 ☆》#دستورات تنظیم مدیر و معاون 
@@ -3847,7 +3847,7 @@ text = [[
 🔷شما دوستان عزیز نمیتوانید از قرار دادن [!/#] در اول دستور استفاده نماید
 🔶دستورات به زبان فارسی هست و جواب دستورات به دو شکل انگلیسی و فارسی قابل تغییر است❕
 〰〰〰〰〰〰〰〰〰〰〰
-➰Powered by :@Sezarinfo
+➰Powered by :@tablighati
 〰〰〰〰〰〰〰〰〰〰〰
 ]]
 return text
@@ -3927,7 +3927,7 @@ else
    if not lang then
      rules = "ℹ️ The Default Rules :\n1⃣ No Flood.\n2⃣ No Spam.\n3⃣ No Advertising.\n4⃣ Try to stay on topic.\n5⃣ Forbidden any racist, sexual, homophobic or gore content.\n➡️ Repeated failure to comply with these rules will cause ban."
     elseif lang then
-       rules = "ℹ️ قوانین پپیشفرض:\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود."
+       rules = "ℹ️ قوانین :\n1⃣ ارسال پیام مکرر ممنوع.\n2⃣ اسپم ممنوع.\n3⃣ تبلیغ ممنوع.\n4⃣ سعی کنید از موضوع خارج نشید.\n5⃣ هرنوع نژاد پرستی, شاخ بازی و پورنوگرافی ممنوع .\n➡️ از قوانین پیروی کنید, در صورت عدم رعایت قوانین اول اخطار و در صورت تکرار مسدود."
  end
 end
 if data.username_ then
