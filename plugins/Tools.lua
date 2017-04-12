@@ -1093,12 +1093,12 @@ matches[3] then
 		local send_file = 
 "./"..matches[2].."/"..matches[3]
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, send_file, '@sezarinfo', dl_cb, nil)
+1, nil, send_file, '@tablighati', dl_cb, nil)
 	end
 	if matches[1]:lower() == "sendplug" and matches[2] or matches[1]:lower() == "Sendplug" and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, plug, '@sezarinfo', dl_cb, nil)
+1, nil, plug, '@tablighati', dl_cb, nil)
     end
   end
 
@@ -1192,7 +1192,7 @@ if matches[1] == "helpsudo" and is_mod(msg) or matches[1] == "Helpsudo" and is_m
 if not lang then
 text = [[
 
-_Sudoer And Admins MaTaDoR Bot Help :_
+_Sudoer And Admins  Bot Help :_
 
 *Visudo* `[username|id|reply]`
 _Add Sudo_
@@ -1301,7 +1301,7 @@ tdcli.sendMessage(msg.chat_id_, 0, 1, text, 1, 'md')
 else
 
 text = [[
-_راهنمای ادمین و سودو های ربات سـزار:_
+_راهنمای ادمین و سودو های ربات :_
 
 *Visudo* `[username|id|reply]`
 _اضافه کردن سودو_
